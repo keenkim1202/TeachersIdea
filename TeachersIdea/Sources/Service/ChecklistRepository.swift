@@ -8,6 +8,8 @@
 
 import Foundation
 
+// protocol : 특정 역할을 수행하기 위한 메소드. 프로퍼티, 기타 요구사항의 청사진.
+// 기능을 정의하고 제시. 기능 구현은 아래에.
 protocol ChecklistRepository {
   func add(_ report: ChildReportType) -> ChildReportType
   func update(_ report: ChildReportType)
@@ -19,7 +21,9 @@ protocol ChecklistRepository {
   func reportsOfMonthly(_ childID: UUID) -> [String:[ChildReportType]]?
 }
 
+// 클래스 안에 프로토콜에서 정의한 기능을 구현.
 final class MemoryChecklistRepository: ChecklistRepository {
+  
   private var childReports: [UUID:[ChildReport]]  // child_id:reports
   private var reports: [UUID:ChildReport]
   

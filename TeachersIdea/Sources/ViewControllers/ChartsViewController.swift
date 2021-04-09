@@ -10,20 +10,29 @@ import UIKit
 import Charts
 
 final class ChartsViewController: UIViewController {
+  
+  //
   // MARK: UI
+  
   @IBOutlet weak var radarChartView: RadarChartView!
   
+  //
   // MARK: Properties
+  
   var report: ChildReportType? = nil
   fileprivate var activities: [String] = []
   
+  //
   // MARK: View Life-Cycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     configure()
   }
   
+  //
   // MARK: Configuring
+  
   fileprivate func configure() {
     radarChartView.noDataFont = UIFont.systemFont(ofSize: CGFloat(15), weight: .bold)
     radarChartView.noDataText = "평가된 발달목록이 없습니다."
@@ -73,7 +82,7 @@ final class ChartsViewController: UIViewController {
   }
 }
 
-extension ChartsViewController: AxisValueFormatter {
+extension ChartsViewController: IAxisValueFormatter {
   func stringForValue(_ value: Double, axis: AxisBase?) -> String {
     return activities[Int(value) % activities.count]
   }

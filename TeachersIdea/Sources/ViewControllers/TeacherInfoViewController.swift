@@ -9,7 +9,10 @@
 import UIKit
 
 final class TeacherInfoViewController: UIViewController {
+  
+  //
   // MARK: CellType
+  
   private enum CellType {
     case name(value: String)
     case email(value: String)
@@ -17,23 +20,30 @@ final class TeacherInfoViewController: UIViewController {
     case phoneNumber(value: String)
   }
   
-  // MARK: UI
+  //
+  // MARK: UI - Properties
   @IBOutlet weak var profileImageView: UIImageView!
   @IBOutlet weak var tableView: UITableView!
   
+  //
   // MARK: Properties
+  
   private let titleFont = UIFont.systemFont(ofSize: 18, weight: .bold)
   private let contentFont = UIFont.systemFont(ofSize: 17, weight: .medium)
   private var cells: [CellType] = []
   var environment: Environment? = nil
   
+  //
   // MARK: View - Lifecycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     config()
   }
-
+  
+  //
   // MARK: Configuring
+  
   fileprivate func config() {
     tableView.tableFooterView = UIView()
     guard let teacher = environment?.teacherService.currentTeacher else { return }
@@ -46,7 +56,9 @@ final class TeacherInfoViewController: UIViewController {
     ]
   }
   
+  //
   // MARK: Actions
+  
   @IBAction func onLogout(_ sender: Any) {
     guard
       let appDelegate = UIApplication.shared.delegate as? AppDelegate,
@@ -68,8 +80,11 @@ final class TeacherInfoViewController: UIViewController {
   }
 }
 
+//
 // MARK: TeacherInfoViewController + UITableViewDataSource
+
 extension TeacherInfoViewController: UITableViewDataSource {
+  
   func tableView(_ tableView: UITableView,
                  numberOfRowsInSection section: Int) -> Int {
     return cells.count
@@ -104,8 +119,11 @@ extension TeacherInfoViewController: UITableViewDataSource {
   }
 }
 
+//
 // MARK: TeacherInfoViewController + UITableViewDelegate
+
 extension TeacherInfoViewController: UITableViewDelegate {
+  
   func tableView(_ tableView: UITableView,
                  heightForRowAt indexPath: IndexPath) -> CGFloat {
     return CGFloat(70)

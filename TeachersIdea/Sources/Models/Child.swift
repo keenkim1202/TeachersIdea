@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ChildType {
-  var birthday: String { get set }
+  var birthday: String { get set } // 프로퍼티를 읽기전용으로 할지, 쓰기전용으로 할지 get set 키워드로 명시. (둘다쓰면 읽기쓰기 둘다)
   var comment: String? { get set }
   var group: Group { get set }
   var height: Float { get set }
@@ -22,13 +22,13 @@ protocol ChildType {
   var dadPhone: String? { get set }
 }
 
-extension ChildType {
+extension ChildType { // extension으로 ChildType 프로토콜을 준수할 세로운 기능을 추가한다.
   static func==(lhs: ChildType, rhs: ChildType) -> Bool {
     return lhs.id == rhs.id
   }
 }
 
-struct MemChild: ChildType, Decodable {
+struct MemChild: ChildType, Decodable { // MemChild 구조체는 ChildType이라는 프로토콜을 채택하여 유아정보에 대한 프로퍼티들을 가질 수 있다.
   var birthday: String
   var comment: String?
   var group: Group

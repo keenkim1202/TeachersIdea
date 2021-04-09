@@ -10,13 +10,20 @@ import UIKit
 import Charts
 
 final class AnalysisViewController: UIViewController {
+  
+  //
   // MARK: Properties
+  
   var environment: Environment? = nil
   
+  //
   // MARK: UI Control
+  
   @IBOutlet weak var chartView: LineChartView!
   
+  //
   // MARK: View Life-Cycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -75,6 +82,7 @@ final class AnalysisViewController: UIViewController {
       set.drawCircleHoleEnabled = false
       dataSets.append(set)
     }
+    
     chartView.data = LineChartData(dataSets: dataSets)
   }
   
@@ -82,7 +90,7 @@ final class AnalysisViewController: UIViewController {
     let max = section.subtitles.count * 10
     let total = section.subtitles
       .flatMap { $0.body }
-      .compactMap { $0.score.toInt() }
+      .flatMap { $0.score.toInt() }
       .reduce(0, +)
     return total / max * 100
   }
@@ -91,7 +99,7 @@ final class AnalysisViewController: UIViewController {
     self.title = "반 통계(전체 유아 날짜별 성취도)"
     
     chartView.backgroundColor = .primary
-    chartView.chartDescription.enabled = false
+    chartView.chartDescription?.enabled = false
     chartView.dragEnabled = true
     chartView.setScaleEnabled(true)
     chartView.pinchZoomEnabled = true

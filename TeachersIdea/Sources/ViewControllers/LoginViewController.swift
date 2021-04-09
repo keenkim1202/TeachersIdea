@@ -14,6 +14,7 @@ import Firebase
 final class LoginViewController: UIViewController {
   
   // MARK: UI
+  
   @IBOutlet weak var loginButton: UIButton?
   @IBOutlet weak var joinButton: UIButton?
   @IBOutlet weak var idTextField: UITextField!
@@ -21,9 +22,13 @@ final class LoginViewController: UIViewController {
   @IBOutlet weak var saveEmailButton: UIButton!
   @IBOutlet weak var saveAutoLoginButton: UIButton!
   
+  //
   // MARK: Properties
+  
   fileprivate var teacher: Teacher?
   var environment: Environment?
+  
+  // TODO: Temporary code...
   fileprivate var tiChildren: [NSManagedObject] = []
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,12 +38,15 @@ final class LoginViewController: UIViewController {
       if let vc = segue.destination as? MemberJoinViewController {
         vc.environment = self.environment
       }
+      
     default:
       break
     }
   }
   
+  //
   // MARK: View Life Cycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -51,7 +59,9 @@ final class LoginViewController: UIViewController {
     self.navigationController?.navigationBar.isHidden = true
   }
   
+  //
   // MARK: Configuring
+  
   fileprivate func configure() {
     loginButton?.layer.cornerRadius = CGFloat(5)
     loginButton?.layer.borderColor = UIColor.black.cgColor
@@ -81,7 +91,9 @@ final class LoginViewController: UIViewController {
     saveAutoLoginButton.isSelected = env.perferenceService.isAutoLogin
   }
   
+  //
   // MARK: Configuring Alert
+  
   fileprivate func showAlert(_ message: String) {
     let alert = UIAlertController(
       title: "⚠️ 오류 �",
@@ -93,12 +105,14 @@ final class LoginViewController: UIViewController {
     self.present(alert, animated: true, completion: nil)
   }
   
+  //
   // MARK: UI Actions
+  
   @IBAction func onLogin(_ sender: Any) {
     signIn()
   }
   
-  @IBAction func onSaveEmail(_ sender: Any) {
+  @IBAction func onSaveEmail(_ sender: Any) { // 이메일 주소를 저장해두는 버튼
     saveEmailButton.isSelected.toggle()
     saveEmail()
   }

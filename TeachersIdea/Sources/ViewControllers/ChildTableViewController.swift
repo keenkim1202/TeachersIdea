@@ -11,19 +11,26 @@ import CoreData
 import Kingfisher
 
 final class ChildTableViewController: UIViewController {
+  
+  //
   // MARK: Properties
+  
   var environment: Environment?
   fileprivate var entries: [ChildType] = []
   fileprivate var filterEntries: [ChildType] = []
   fileprivate var selectedChildType: ChildType?
   fileprivate var searchWord: String? = nil
   fileprivate var filtered: Bool = false
-
+  
+  //
   // MARK: UI
+  
   @IBOutlet weak var tableView: UITableView!
   private let searchController: UISearchController = UISearchController()
   
+  //
   // MARK: View Life Cycle
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     switch segue.identifier {
     case "AddVCSegue":
@@ -52,13 +59,13 @@ final class ChildTableViewController: UIViewController {
     }
   }
   
-  // MARK: View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     guard let teacher = environment?.teacherService.currentTeacher else { return }
     title = "\(teacher.group.rawValue) 목록"
     tableView.tableFooterView = UIView()
     
+    // Setup the search controller
     searchController.searchResultsUpdater = self
     searchController.obscuresBackgroundDuringPresentation = false
     searchController.searchBar.placeholder = "이름으로 검색을 할 수 있습니다."
@@ -71,7 +78,9 @@ final class ChildTableViewController: UIViewController {
     fetch()
   }
   
+  //
   // MARK: Fetching
+  
   fileprivate func fetch() {
     guard
       let childrenService = environment?.childrenService,
@@ -96,7 +105,9 @@ final class ChildTableViewController: UIViewController {
   }
 }
 
+//
 // MARK: - Table view data source
+
 extension ChildTableViewController: UITableViewDataSource {
   func tableView(
     _ tableView: UITableView,
@@ -117,6 +128,7 @@ extension ChildTableViewController: UITableViewDataSource {
 }
 
 extension ChildTableViewController: UITableViewDelegate {
+  
   func tableView(
     _ tableView: UITableView,
     willSelectRowAt indexPath: IndexPath) -> IndexPath? {

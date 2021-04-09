@@ -6,7 +6,6 @@
 //  Copyright © 2020 homurahomu. All rights reserved.
 //
 
-import UIKit
 import Foundation
 import Firebase
 import Kingfisher

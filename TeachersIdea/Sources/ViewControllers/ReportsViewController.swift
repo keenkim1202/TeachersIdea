@@ -9,17 +9,24 @@
 import UIKit
 
 final class ReportsViewController: UIViewController {
-  // MARK: Properties
+  
+  //
+  // MAKR: Properties
+  
   var environment: Environment?
   var childType: ChildType?
   private var keys: [String] = []
   private var data: [String:[ChildReportType]] = [:]
   private var selectedDate: Date? = nil
   
+  //
   // MARK: UI
+  
   @IBOutlet weak var tableView: UITableView!
   
-  // MARK: View Life-Cycle
+  //
+  // MARK: View Life Cycle
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard let identifier = segue.identifier else { return }
     switch identifier {
@@ -37,7 +44,6 @@ final class ReportsViewController: UIViewController {
     }
   }
   
-  // MARK: View-Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     configure()
@@ -52,8 +58,9 @@ final class ReportsViewController: UIViewController {
   }
 }
 
-// MARK: UITableViewDataSource
+
 extension ReportsViewController: UITableViewDataSource {
+  
   func numberOfSections(in tableView: UITableView) -> Int {
     return keys.count
   }
@@ -71,10 +78,11 @@ extension ReportsViewController: UITableViewDataSource {
     cell.textLabel?.text = "\(day) 일"
     return cell
   }
+  
 }
 
-// MARK: UITableViewDelegte
 extension ReportsViewController: UITableViewDelegate {
+  
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     return keys[section]
   }

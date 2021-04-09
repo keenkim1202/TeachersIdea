@@ -9,16 +9,20 @@
 import UIKit
 
 final class DetailChecklistViewController: UIViewController {
-  //MARK: Enum
+  
   enum ViewType {
     case all
     case filtered
   }
   
+  //
   // MARK: UI
+  
   @IBOutlet weak var tableView: UITableView!
   
+  //
   // MARK: Properties
+  
   var viewType: ViewType = .all
   var reportID: UUID? = nil
   var environment: Environment? = nil
@@ -26,13 +30,17 @@ final class DetailChecklistViewController: UIViewController {
   
   fileprivate var items: [ChildChecklistDetailBody] = []
   
+  //
   // MARK: View Life Cycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     configure()
   }
 
+  //
   // MARK: Configuring
+  
   fileprivate func configure() {
     tableView.tableFooterView = UIView()
     
@@ -56,7 +64,9 @@ final class DetailChecklistViewController: UIViewController {
       .body
   }
   
+  //
   // MARK: Actions
+  
   @IBAction func onScoreButton(_ sender: Any) {
     guard let button = sender as? UIButton else { return }
     guard
@@ -99,8 +109,10 @@ final class DetailChecklistViewController: UIViewController {
   }
 }
 
+//
 //MARK: Datasource
 extension DetailChecklistViewController: UITableViewDataSource {
+  
   func tableView(
     _ tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
@@ -119,6 +131,7 @@ extension DetailChecklistViewController: UITableViewDataSource {
   }
 }
 
+//
 //MARK: Delegate
 extension DetailChecklistViewController: UITableViewDelegate {
 }

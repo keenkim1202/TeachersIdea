@@ -9,13 +9,18 @@
 import UIKit
 
 final class DetailChecklistTableViewCell: UITableViewCell {
+  
+  //
   // MARK: UI Properties
+  
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var badButton: UIButton!
   @IBOutlet weak var normalButton: UIButton!
   @IBOutlet weak var goodButton: UIButton!
   
+  //
   // MARK: Configuring
+  
   func configure(indexRow: Int, title: String, score: ChecklistScore = .none) {
     titleLabel.text = title
     configureButtons(indexRow)

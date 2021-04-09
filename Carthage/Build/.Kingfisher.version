@@ -1,0 +1,59 @@
+{
+  "Mac" : [
+    {
+      "hash" : "84a34ec0d166f93a7b24d0a191910e4886001d995b4637ebf524eb3bff2da03c",
+      "name" : "KingfisherSwiftUI",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    },
+    {
+      "hash" : "4f4457bde563d5c0a9813d6ee7b2ebb870bb7ff3c0e2f9f81635f022a1f6d556",
+      "name" : "Kingfisher",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    }
+  ],
+  "watchOS" : [
+    {
+      "hash" : "474a642e5142bc519f3676512cb4847c04bd8adce32fe198bed3204359763ed6",
+      "name" : "Kingfisher",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    },
+    {
+      "hash" : "340915cff3ae2a721cf9511b53f2f4ce75fb157a9c182772c27b8f4942a8ae27",
+      "name" : "KingfisherSwiftUI",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    }
+  ],
+  "tvOS" : [
+    {
+      "hash" : "fa12bc5aad8f250ff575c9b04138bfbbf7b001fc9e1d704b50273f3c4184efc9",
+      "name" : "Kingfisher",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    },
+    {
+      "hash" : "bf024f1d03b41e252ec7db26c9ffcfcf14be6c5cb95138ecd046a2a1b3dc17e6",
+      "name" : "KingfisherSwiftUI",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    }
+  ],
+  "commitish" : "5.15.5",
+  "iOS" : [
+    {
+      "hash" : "4e1b8c3912352bcd5a7962c5b718cd4e69f64419bb6194a42387e4e49c28b41a",
+      "name" : "Kingfisher",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    },
+    {
+      "hash" : "e3aba12de91519c0a57d14554ef1c46ef9bdfbb0e2f68b074a7e7ae98b097c69",
+      "name" : "KingfisherSwiftUI",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    }
+  ]
+}

@@ -9,7 +9,10 @@
 import UIKit
 
 final class MenuViewController: UIViewController {
+  
+  //
   // MAKR: Properties
+  
   var environment: Environment?
   var childType: ChildType?
   fileprivate let items: [String] = [
@@ -20,10 +23,14 @@ final class MenuViewController: UIViewController {
     "👶 유아 정보"]
   fileprivate var checklistViewType: ChecklistViewController.ViewType = .all
   
+  //
   // MARK: UI
+  
   @IBOutlet weak var tableView: UITableView!
   
+  //
   // MARK: View Life Cycle
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     switch segue.identifier {
     case "InfoVCSegue":
@@ -74,6 +81,7 @@ final class MenuViewController: UIViewController {
   }
 }
 
+//
 // MARK: UITableView DataSource
 
 extension MenuViewController: UITableViewDataSource {
@@ -101,16 +109,21 @@ extension MenuViewController: UITableViewDataSource {
   }
 }
 
+//
 // MARK: UITableView Delegate
+
 extension MenuViewController: UITableViewDelegate {
+  
   func tableView(
     _ tableView: UITableView,
     willSelectRowAt indexPath: IndexPath) -> IndexPath? {
     switch indexPath.row {
     case 0:
       checklistViewType = .all
+      
     case 1:
       checklistViewType = .filtered
+      
     default:
       break
     }

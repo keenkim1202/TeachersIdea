@@ -11,7 +11,10 @@ import Lottie
 import FirebaseAuth
 
 final class MemberJoinViewController: UIViewController {
+  
+  //
   //MARK: Enum
+  
   enum CellType: String {
     case email = "이메일"
     case name = "이름"
@@ -21,8 +24,9 @@ final class MemberJoinViewController: UIViewController {
     case profileImage = "프로필 사진"
   }
   
+  //
   // MARK: Properties
-  var environment: Environment?
+  
   fileprivate var cells: [CellType] = [.profileImage, .email, .password, .name, .phone, .birthday]
   fileprivate var profileImage: UIImage? = nil
   fileprivate var isLoading: Bool = false {
@@ -31,15 +35,20 @@ final class MemberJoinViewController: UIViewController {
       doneButton.isEnabled = isLoading.negate
     }
   }
+  var environment: Environment?
   
+  //
   // MARK: UI
+  
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var loadingView: UIView!
   @IBOutlet weak var containerAnimationView: UIView!
   @IBOutlet weak var doneButton: UIBarButtonItem!
   private let animationView = AnimationView(name: "loading-cloud")
   
+  //
   // MARK: Life View Cycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     configure()
@@ -47,10 +56,11 @@ final class MemberJoinViewController: UIViewController {
   }
   
   fileprivate func configure() {
-    self.title = "회원가입"
-    self.navigationController?.navigationBar.isHidden = false
+    self.title = "회원가입" // navigationBar에 적힐 title
+    self.navigationController?.navigationBar.isHidden = false // 회원가입화면에서 navigationBar가 뜨도록.
     self.tableView.tableFooterView = UIView()
     
+    // Configure Keyboard Event
     NotificationCenter.default.addObserver(
       self,
       selector: #selector(keyboardWillChangeFrame(notification:)),
@@ -65,7 +75,9 @@ final class MemberJoinViewController: UIViewController {
     containerAnimationView.addSubview(animationView)
   }
   
+  //
   // MARK: Configuring Alert
+  
   fileprivate func showAlert(_ message: String) {
     UIAlertController
       .show(self, contentType: .error, message: message)
@@ -73,7 +85,7 @@ final class MemberJoinViewController: UIViewController {
   
   @IBAction func onDone(_ sender: Any) {
     view.endEditing(true)
-    let contents = cells
+    let contents = cells // chaining
       .enumerated()
       .map { elem -> String? in
         let cell = self.tableView.cellForRow(at: IndexPath(row: elem.offset, section: 0)) as? MemberJoinTableViewCell
@@ -87,7 +99,7 @@ final class MemberJoinViewController: UIViewController {
         default:
           return cell?.contentTextField.text
         }
-      }
+    }
     
     // firebase 계정 생성
     guard
@@ -102,8 +114,8 @@ final class MemberJoinViewController: UIViewController {
       name.isEmpty == false,
       phoneNumber.isEmpty == false,
       birthday.isEmpty == false else {
-      self.showAlert("모든 칸을 입력해주세요.")
-      return
+        self.showAlert("모든 칸을 입력해주세요.")
+        return
     }
     
     isLoading = true
@@ -146,14 +158,16 @@ final class MemberJoinViewController: UIViewController {
     self.present(imagePickerController, animated: true, completion: nil)
   }
   
+  //
   // MARK: Configure Keyboard
+  
   @objc fileprivate func keyboardWillChangeFrame(notification: Notification) {
     guard
       let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey]
         as? CGRect,
       let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey]
         as? TimeInterval
-    else { return }
+      else { return }
     
     let keyboardVisibleHeight = UIScreen.main.bounds.height - keyboardFrame.origin.y
     UIView.animate(withDuration: duration) {
@@ -162,8 +176,11 @@ final class MemberJoinViewController: UIViewController {
   }
 }
 
+//
 //MARK: Datasource
+
 extension MemberJoinViewController: UITableViewDataSource {
+  
   func tableView(
     _ tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
@@ -197,8 +214,11 @@ extension MemberJoinViewController: UITableViewDataSource {
   }
 }
 
+//
 //MARK: Delegate
+
 extension MemberJoinViewController: UITableViewDelegate {
+  
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     let cell = cells[indexPath.row]
     switch cell {
@@ -210,24 +230,34 @@ extension MemberJoinViewController: UITableViewDelegate {
   }
 }
 
+//
 // MARK: UINavigationControllerDelegate
+
 extension MemberJoinViewController: UINavigationControllerDelegate {
 }
 
+//
 // MARK: UIImagePickerControllerDelegate
+
 extension MemberJoinViewController: UIImagePickerControllerDelegate {
+  
   func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    // Disniss the picker if the user canceled.
     dismiss(animated: true, completion: nil)
   }
   
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    //The info dictionary may contain multiple representations of the image. You want to use the original.
     guard let selectedImage = info[.originalImage] as?
-            UIImage else {
-      fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+      UIImage else {
+        fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
     }
+    
+    //set PhotoImageView to display the selected image.
     self.profileImage = selectedImage
     self.tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
     
+    //Dismiss the picker.
     dismiss(animated: true, completion: nil)
   }
 }

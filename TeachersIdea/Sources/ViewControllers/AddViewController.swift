@@ -10,7 +10,7 @@ import UIKit
 import Lottie
 
 final class AddViewController : UIViewController {
-  // MARK: Enum
+  
   enum Item: String {
     case photo = "AddPhotoCell"
     case name = "AddNameCell"
@@ -32,7 +32,9 @@ final class AddViewController : UIViewController {
     case update
   }
   
+  //
   // MARK: Properties
+  
   var environment: Environment?
   var childType: ChildType?
   fileprivate let accountBoxImage = UIImage(named: "account_box")
@@ -56,19 +58,24 @@ final class AddViewController : UIViewController {
     }
   }
   
+  //
   // MARK: UI
+  
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var loadingView: UIView!
   @IBOutlet weak var animationContainerView: UIView!
   @IBOutlet weak var doneButton: UIBarButtonItem!
   private let animationView: AnimationView = AnimationView(name: "loading-cloud")
   
+  //
   // MARK: View Life Cycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     configure()
   }
   
+  //
   // MARK: Configuriong
   fileprivate func configure() {
     loadingView.isHidden = isLoading.negate
@@ -121,7 +128,9 @@ final class AddViewController : UIViewController {
     }
   }
   
+  //
   // MARK: UI Actions
+  
   @IBAction func onDone(_ sender: Any) {
     self.tableView.endEditing(true)
     guard
@@ -176,7 +185,7 @@ final class AddViewController : UIViewController {
       }
       
     case .update:
-      repo.update(child: child)
+      repo.update(child: child) //
       childrenService.update(child) { result in
         self.isLoading = false
         self.animationView.stop()
@@ -198,7 +207,9 @@ final class AddViewController : UIViewController {
     self.present(imagePickerController, animated: true, completion: nil)
   }
   
+  //
   // MARK: Configure Keyboard
+  
   @objc fileprivate func keyboardWillChangeFrame(notification: Notification) {
     guard
       let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey]
@@ -213,13 +224,16 @@ final class AddViewController : UIViewController {
     }
   }
   
+  //
   // MARK: Configuring Alert
+  
   fileprivate func showAlert(_ message: String) {
     UIAlertController
       .show(self, contentType: .error, message: message)
   }
 }
 
+//
 // MARK: UITextFieldDelegate
 extension AddViewController: UITextFieldDelegate {
   
@@ -240,7 +254,9 @@ extension AddViewController: UITextFieldDelegate {
   }
 }
 
+//
 // MARK: UITableViewDataSource
+
 extension AddViewController: UITableViewDataSource {
   func tableView(
     _ tableView: UITableView,
@@ -297,7 +313,9 @@ extension AddViewController: UITableViewDataSource {
   }
 }
 
+//
 // MARK: UITableViewDelegate
+
 extension AddViewController: UITableViewDelegate {
   func tableView(
     _ tableView: UITableView,
@@ -324,25 +342,33 @@ extension AddViewController: UITableViewDelegate {
   }
 }
 
+//
 // MARK: UINavigationControllerDelegate
+
 extension AddViewController: UINavigationControllerDelegate {
 }
 
+//
 // MARK: UIImagePickerControllerDelegate
+
 extension AddViewController: UIImagePickerControllerDelegate {
   func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    // Disniss the picker if the user canceled.
     dismiss(animated: true, completion: nil)
   }
   
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    //The info dictionary may contain multiple representations of the image. You want to use the original.
     guard let selectedImage = info[.originalImage] as?
       UIImage else {
         fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
     }
     
+    //set PhotoImageView to display the selected image.
     self.photo = selectedImage
     self.tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
     
+    //Dismiss the picker.
     dismiss(animated: true, completion: nil)
   }
 }

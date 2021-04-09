@@ -11,15 +11,22 @@ import FirebaseAuth
 import Lottie
 
 final class SlashViewController: UIViewController {
+  
+  //
   // MARK: Properties
+  
   fileprivate var environment: Environment!
   fileprivate var appDelegate: AppDelegate!
   
+  //
   // MARK: UIControl
+  
   @IBOutlet weak var containerView: UIView!
   private let animationView = AnimationView(name: "coffee-time")
-
-  // MARK: View Life-Cycle
+  
+  //
+  // MAKR: View Life-Cycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -70,6 +77,7 @@ final class SlashViewController: UIViewController {
           switch result {
           case .success:
             self.naviagteMainNC()
+            
           case .failure:
             self.navigateLoginNC()
           }
@@ -132,6 +140,7 @@ final class SlashViewController: UIViewController {
       let childList = try? JSONDecoder().decode(MemChildList.self, from: data) else {
         fatalError()
     }
+    
     for child in childList {
       env.childRepository.add(child: child)
     }

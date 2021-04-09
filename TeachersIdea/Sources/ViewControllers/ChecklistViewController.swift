@@ -9,13 +9,15 @@
 import UIKit
 
 final class ChecklistViewController: UIViewController {
-  // MARK: Enum
+  
   enum ViewType {
     case all
     case filtered
   }
   
+  //
   // MARK: Properties
+  
   var childType: ChildType?
   var environment: Environment? = nil
   var viewType: ViewType = .all
@@ -24,13 +26,17 @@ final class ChecklistViewController: UIViewController {
   fileprivate var selectedIndexPath: IndexPath? = nil
   fileprivate var reportID: UUID? = nil
   
-  // MARK: View Life-Cycle
+  //
+  // MARK: View Life Cycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     configure()
   }
   
+  //
   // MARK: Configuring
+  
   fileprivate func configure() {
     guard
       let path = Bundle.main.path(forResource: "checklist_3", ofType: "json"),
@@ -55,12 +61,16 @@ final class ChecklistViewController: UIViewController {
       reportID = report.id
     }
     
+    //
+    // TODO: 관찰된 목록
     if let reportID = self.reportID, viewType == .filtered {
       self.childChecklist = env.checklistRepository.filteredReport(reportID)?.checklist
     }
   }
   
+  //
   // MARK: Navigate
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard let identifier = segue.identifier else { return }
     switch identifier {
@@ -75,10 +85,13 @@ final class ChecklistViewController: UIViewController {
       break
     }
   }
+  
 }
 
+//
 //MARK: Datasource
 extension ChecklistViewController: UITableViewDataSource {
+  
   func numberOfSections(in tableView: UITableView) -> Int {
     return childChecklist?.count ?? 0
   }
@@ -118,8 +131,10 @@ extension ChecklistViewController: UITableViewDataSource {
   
 }
 
+//
 //MARK: Delegate
 extension ChecklistViewController: UITableViewDelegate {
+  
   func tableView(
     _ tableView: UITableView,
     willSelectRowAt indexPath: IndexPath) -> IndexPath? {

@@ -3,18 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C5746BC26202AA90050DD6B /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5746BB26202AA90050DD6B /* Charts */; };
-		1C5746C026202AC90050DD6B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5746BF26202AC90050DD6B /* Lottie */; };
-		1C5746C326202AE90050DD6B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5746C226202AE90050DD6B /* Kingfisher */; };
-		1C5746CC26202C720050DD6B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5746CB26202C720050DD6B /* FirebaseAnalytics */; };
-		1C5746CE26202C720050DD6B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5746CD26202C720050DD6B /* FirebaseStorage */; };
-		1C5746D026202C720050DD6B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5746CF26202C720050DD6B /* FirebaseAuth */; };
-		1C5746D226202C720050DD6B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5746D126202C720050DD6B /* FirebaseFirestore */; };
-		1C5746D426202C720050DD6B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5746D326202C720050DD6B /* FirebaseDatabase */; };
 		3E1683F124CBF5E10005EBE1 /* MemberJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1683F024CBF5E10005EBE1 /* MemberJoinViewController.swift */; };
 		3E1683F324CC04B20005EBE1 /* MemberJoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1683F224CC04B20005EBE1 /* MemberJoinTableViewCell.swift */; };
 		3EB170BB2530265C00614BCB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EB170BA2530265C00614BCB /* GoogleService-Info.plist */; };
@@ -40,6 +32,9 @@
 		C85D95E02485F1350092E52F /* ChildChecklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85D95DF2485F1350092E52F /* ChildChecklist.swift */; };
 		C85F7AD3248B5F6F00AF69F7 /* checklist_3.json in Resources */ = {isa = PBXBuildFile; fileRef = C85F7AD2248B5F6F00AF69F7 /* checklist_3.json */; };
 		C85F7AD5248B65FA00AF69F7 /* ChecklistRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F7AD4248B65FA00AF69F7 /* ChecklistRepository.swift */; };
+		C8720FC32516FDBF00CF5882 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8720FC22516FDBF00CF5882 /* Charts.framework */; };
+		C8720FC92516FDD100CF5882 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8720FC62516FDD100CF5882 /* Kingfisher.framework */; };
+		C8720FCB2516FDD200CF5882 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8720FC72516FDD100CF5882 /* Lottie.framework */; };
 		C88AF1C2248608C800650801 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88AF1C1248608C800650801 /* ChartsViewController.swift */; };
 		C8B925B82466A6D100950A1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B925AD2466A6D100950A1D /* AppDelegate.swift */; };
 		C8B925BA2466A6D100950A1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B925B02466A6D100950A1D /* Assets.xcassets */; };
@@ -57,6 +52,7 @@
 		C8D0620C246AB1A800595B18 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D0620B246AB1A800595B18 /* LoginViewController.swift */; };
 		C8D0620F246AB68900595B18 /* ChildRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D0620E246AB68900595B18 /* ChildRepository.swift */; };
 		C8E0EBB32504920C00D864D9 /* TeachersIdea+UIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0EBB22504920C00D864D9 /* TeachersIdea+UIAlert.swift */; };
+		F27ABBDBEB6B2CFB3D63780F /* Pods_TeachersIdea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6FDB8DE3414031E2EFD3577 /* Pods_TeachersIdea.framework */; };
 		FE1319F324EA02BE000DB694 /* PreferenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1319F224EA02BE000DB694 /* PreferenceService.swift */; };
 		FE1319F524EA18A2000DB694 /* SlashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1319F424EA18A2000DB694 /* SlashViewController.swift */; };
 		FE3CEAEE251DE467006ADBA8 /* ChildReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3CEAED251DE467006ADBA8 /* ChildReport.swift */; };
@@ -70,6 +66,9 @@
 		3E1683F024CBF5E10005EBE1 /* MemberJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberJoinViewController.swift; sourceTree = "<group>"; };
 		3E1683F224CC04B20005EBE1 /* MemberJoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberJoinTableViewCell.swift; sourceTree = "<group>"; };
 		3EB170BA2530265C00614BCB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9034A6405B0A4E42243C7CC9 /* Pods-TeachersIdea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeachersIdea.debug.xcconfig"; path = "Target Support Files/Pods-TeachersIdea/Pods-TeachersIdea.debug.xcconfig"; sourceTree = "<group>"; };
+		B6FDB8DE3414031E2EFD3577 /* Pods_TeachersIdea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeachersIdea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB065AFE873EF02B50BC156C /* Pods-TeachersIdea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeachersIdea.release.xcconfig"; path = "Target Support Files/Pods-TeachersIdea/Pods-TeachersIdea.release.xcconfig"; sourceTree = "<group>"; };
 		BD1046F1247FAC420053C78D /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		BD1046F4247FB9460053C78D /* TeachersIdea+DateFormmater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeachersIdea+DateFormmater.swift"; sourceTree = "<group>"; };
 		BD1046F6247FCA600053C78D /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +91,9 @@
 		C85D95DF2485F1350092E52F /* ChildChecklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildChecklist.swift; sourceTree = "<group>"; };
 		C85F7AD2248B5F6F00AF69F7 /* checklist_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = checklist_3.json; sourceTree = "<group>"; };
 		C85F7AD4248B65FA00AF69F7 /* ChecklistRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistRepository.swift; sourceTree = "<group>"; };
+		C8720FC22516FDBF00CF5882 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
+		C8720FC62516FDD100CF5882 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		C8720FC72516FDD100CF5882 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		C872FD492466A646004B9C4F /* TeachersIdea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeachersIdea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88AF1C1248608C800650801 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		C8B925AD2466A6D100950A1D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,20 +127,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C5746C326202AE90050DD6B /* Kingfisher in Frameworks */,
-				1C5746D026202C720050DD6B /* FirebaseAuth in Frameworks */,
-				1C5746BC26202AA90050DD6B /* Charts in Frameworks */,
-				1C5746CC26202C720050DD6B /* FirebaseAnalytics in Frameworks */,
-				1C5746CE26202C720050DD6B /* FirebaseStorage in Frameworks */,
-				1C5746C026202AC90050DD6B /* Lottie in Frameworks */,
-				1C5746D426202C720050DD6B /* FirebaseDatabase in Frameworks */,
-				1C5746D226202C720050DD6B /* FirebaseFirestore in Frameworks */,
+				C8720FC92516FDD100CF5882 /* Kingfisher.framework in Frameworks */,
+				C8720FC32516FDBF00CF5882 /* Charts.framework in Frameworks */,
+				F27ABBDBEB6B2CFB3D63780F /* Pods_TeachersIdea.framework in Frameworks */,
+				C8720FCB2516FDD200CF5882 /* Lottie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77E0D76A74E6D002D9DC21AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9034A6405B0A4E42243C7CC9 /* Pods-TeachersIdea.debug.xcconfig */,
+				BB065AFE873EF02B50BC156C /* Pods-TeachersIdea.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BD1046F3247FB9110053C78D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,11 +179,24 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		C84877CD2473A87100C9CD74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8720FC62516FDD100CF5882 /* Kingfisher.framework */,
+				C8720FC72516FDD100CF5882 /* Lottie.framework */,
+				C8720FC22516FDBF00CF5882 /* Charts.framework */,
+				B6FDB8DE3414031E2EFD3577 /* Pods_TeachersIdea.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C872FD402466A646004B9C4F = {
 			isa = PBXGroup;
 			children = (
 				C872FD4B2466A646004B9C4F /* TeachersIdea */,
 				C872FD4A2466A646004B9C4F /* Products */,
+				C84877CD2473A87100C9CD74 /* Frameworks */,
+				77E0D76A74E6D002D9DC21AC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -291,25 +311,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C872FD5D2466A647004B9C4F /* Build configuration list for PBXNativeTarget "TeachersIdea" */;
 			buildPhases = (
+				74376BFA424949BBFEF31A96 /* [CP] Check Pods Manifest.lock */,
 				C872FD452466A646004B9C4F /* Sources */,
 				C872FD462466A646004B9C4F /* Frameworks */,
 				C872FD472466A646004B9C4F /* Resources */,
+				A1B23DF543DBC2CADBE8B686 /* [CP] Embed Pods Frameworks */,
+				C8D30B3C250DF9DC00A27397 /* Carthage */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TeachersIdea;
-			packageProductDependencies = (
-				1C5746BB26202AA90050DD6B /* Charts */,
-				1C5746BF26202AC90050DD6B /* Lottie */,
-				1C5746C226202AE90050DD6B /* Kingfisher */,
-				1C5746CB26202C720050DD6B /* FirebaseAnalytics */,
-				1C5746CD26202C720050DD6B /* FirebaseStorage */,
-				1C5746CF26202C720050DD6B /* FirebaseAuth */,
-				1C5746D126202C720050DD6B /* FirebaseFirestore */,
-				1C5746D326202C720050DD6B /* FirebaseDatabase */,
-			);
 			productName = TeachersIdea;
 			productReference = C872FD492466A646004B9C4F /* TeachersIdea.app */;
 			productType = "com.apple.product-type.application";
@@ -321,7 +334,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = homurahomu;
 				TargetAttributes = {
 					C872FD482466A646004B9C4F = {
@@ -330,7 +343,7 @@
 				};
 			};
 			buildConfigurationList = C872FD442466A646004B9C4F /* Build configuration list for PBXProject "TeachersIdea" */;
-			compatibilityVersion = "Xcode 12.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -338,12 +351,6 @@
 				Base,
 			);
 			mainGroup = C872FD402466A646004B9C4F;
-			packageReferences = (
-				1C5746BA26202AA90050DD6B /* XCRemoteSwiftPackageReference "Charts" */,
-				1C5746BE26202AC90050DD6B /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				1C5746C126202AE90050DD6B /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				1C5746CA26202C720050DD6B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			productRefGroup = C872FD4A2466A646004B9C4F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -371,6 +378,72 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74376BFA424949BBFEF31A96 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TeachersIdea-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1B23DF543DBC2CADBE8B686 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeachersIdea/Pods-TeachersIdea-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeachersIdea/Pods-TeachersIdea-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeachersIdea/Pods-TeachersIdea-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8D30B3C250DF9DC00A27397 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Charts.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Lottie.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Charts.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Lottie.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework\n",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nrm -rf ${TMPDIR}/TemporaryItems/*carthage*\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C872FD452466A646004B9C4F /* Sources */ = {
@@ -468,7 +541,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -493,7 +565,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -529,7 +601,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -548,7 +619,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -560,13 +631,16 @@
 		};
 		C872FD5E2466A647004B9C4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9034A6405B0A4E42243C7CC9 /* Pods-TeachersIdea.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/TeachersIdea/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -575,19 +649,21 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
 		C872FD5F2466A647004B9C4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB065AFE873EF02B50BC156C /* Pods-TeachersIdea.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/TeachersIdea/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -596,7 +672,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
@@ -622,84 +697,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		1C5746BA26202AA90050DD6B /* XCRemoteSwiftPackageReference "Charts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/danielgindi/Charts";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.1;
-			};
-		};
-		1C5746BE26202AC90050DD6B /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.2.1;
-			};
-		};
-		1C5746C126202AE90050DD6B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.2.1;
-			};
-		};
-		1C5746CA26202C720050DD6B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.10.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1C5746BB26202AA90050DD6B /* Charts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1C5746BA26202AA90050DD6B /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = Charts;
-		};
-		1C5746BF26202AC90050DD6B /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1C5746BE26202AC90050DD6B /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
-		1C5746C226202AE90050DD6B /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1C5746C126202AE90050DD6B /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-		1C5746CB26202C720050DD6B /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1C5746CA26202C720050DD6B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		1C5746CD26202C720050DD6B /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1C5746CA26202C720050DD6B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-		};
-		1C5746CF26202C720050DD6B /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1C5746CA26202C720050DD6B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		1C5746D126202C720050DD6B /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1C5746CA26202C720050DD6B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		1C5746D326202C720050DD6B /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1C5746CA26202C720050DD6B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C872FD412466A646004B9C4F /* Project object */;
 }
