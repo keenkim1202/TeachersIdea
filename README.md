@@ -9,7 +9,7 @@ TeachersIdea
 5 버전 이상이 필요합니다.
 
 ### Swift Package Manger
-[Carthage], [Cocoapod]으 사용하던 부분을 Swift Package manager로 전환하였습니다.
+[Carthage], [Cocoapod]을 사용하던 부분을 Swift Package manager로 전환하였습니다.
 
 
 ~~[Carthage](https://github.com/Carthage/Carthage) 설치가 필요합니다.
