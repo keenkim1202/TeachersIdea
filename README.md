@@ -11,13 +11,6 @@ TeachersIdea
 ### Swift Package Manger
 [Carthage], [Cocoapod]을 사용하던 부분을 Swift Package manager로 전환하였습니다.
 
-
-~~[Carthage](https://github.com/Carthage/Carthage) 설치가 필요합니다.
-자세하 내용은 [Carthage Install Guide](https://github.com/Carthage/Carthage#installing-carthage)에 따라서 진행해주세요.~~
-
-~~[Cocoapod](https://cocoapods.org/) 설치가 필요합니다.
-자세한 내용은 [Cocoapod Install Guide](https://guides.cocoapods.org/using/getting-started.html#installation)에 따라서 진행해주세요.~~
-
 ### Firebase
 Firebase 설정이 필요합니다. 
 'GoogleService-Info.plist'를 추가해주세요.
